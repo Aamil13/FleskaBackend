@@ -1,8 +1,5 @@
 import mongoose from "mongoose"
 
-const pass = "OUHQh9mGPghwNOT7"
-
-
 const MONGO_URL = 'mongodb+srv://aamilshafi13:OUHQh9mGPghwNOT7@cluster0.qvkns0q.mongodb.net/menu?retryWrites=true&w=majority'
 
 export const ConnectDB = async()=>{

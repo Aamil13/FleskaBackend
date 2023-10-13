@@ -4,10 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/index.ts",
-    "dev": "nodemon "
-  },
+    "start": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "pre-commit": [
+      "build",
+      "add-build"
+  ],
   "author": "Aamil",
   "license": "ISC",
   "devDependencies": {
